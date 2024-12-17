@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/2921/2921222.png">
+</head>
+<body>
+    {% include 'nav.html' %}
+
+    <section>
+        <div class="form-section">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="heading">
+                    <div class="head-content">
+                        <h2>
+                            Edit the Task Details
+                        </h2>
+                    </div>
+                </div>
+                {% csrf_token %}
+                <div class="form-contents">
+                    <label for="title">Task:</label>
+                    <input type="text" id="task" name="task" value="{{data2.task}}">
+                </div>
+                <div class="form-contents">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" value="{{data2.description}}">
+                </div>
+                <div class="button">
+                    {% if edit == True %}
+                    <button type="submit">Save Changes</button>
+                    {% else %}
+                    <button type="submit">Add Task</button>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

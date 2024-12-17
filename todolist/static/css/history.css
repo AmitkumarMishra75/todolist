@@ -1,0 +1,90 @@
+/* navbar */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: border-box;
+}
+
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ln{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.lnc{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#pt {
+    
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 1rem;
+    width: 400px;
+    height: max-content;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card h3 {
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.c1 {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c1 a{
+    color: #000;;
+}
+
+form button i{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form button i:hover{
+    color: red;
+}

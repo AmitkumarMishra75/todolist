@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link rel="stylesheet" href="{% static 'css/display.css' %}">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/2387/2387635.png">
+</head>
+<body>
+    {% include 'nav.html' %}
+
+    <section class="card-container">
+        <div class="card">
+            <h2>Task: {{data1.task}}</h2>
+            <p>Description: {{data1.description}}</p>
+        </div>
+        <div class="button">
+            <div class="button-con">
+                <button type="submit">
+                    <div class="links">
+                        <a href="{% url 'index' %}">
+                            Back
+                        </a>
+                    </div>     
+                </button>
+            </div>
+            <div class="button-con">
+                <button type="submit">
+                    <div class="links">
+                        <a href="{% url 'edit' data1.id %}">
+                            Edit
+                        </a>
+                    </div>     
+                </button>
+            </div>
+            <div class="button-con delete">
+                    <div class="links">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                                <button type="submit">
+                                    Mark As Done
+                                </button>
+                        </form>
+                    </div>     
+            </div>
+        </div>
+    </section>
+</body>
+</html>

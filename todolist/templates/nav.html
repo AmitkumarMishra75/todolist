@@ -1,0 +1,21 @@
+
+    <nav class="navbar">
+        <div class="ln">
+            <div class="lnc">
+                <a href="{% url 'create' %}"><p>Home</p></a>
+                <a href="{% url 'index' %}"><p>To Do List</p></a>
+                <a href="{% url 'history' %}"><p>History</p></a>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="search-button">
+            {% if is_index %}
+                <form method="GET" action="">
+                    <div>
+                        <input type="text" name="search" placeholder="Search tasks" style="padding: 10px;">
+                        <button type="submit" style="padding: 11px;">Search</button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </nav>
